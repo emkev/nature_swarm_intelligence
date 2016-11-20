@@ -240,7 +240,7 @@ void compute_new_heading(int which)
      dx = (v(0) + at) dt   ,   x = x(0) + v(0)t + (1/2)a(t^2) ; 
    */
   xnv[which] = xv[which] * ddt + xt * (1 - ddt) ;
-  ynv[which] = yv[which] * ddt + xt * (1 - ddt) ;
+  ynv[which] = yv[which] * ddt + yt * (1 - ddt) ;
 
   /* normalize if new velocity is too small . */
   lentemp = LEN(xnv[which] , ynv[which]) ;
